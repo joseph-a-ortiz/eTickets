@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using Movie_App.Data;
+
 namespace Movie_App.Models
 {
     public class Movie
@@ -19,5 +22,13 @@ namespace Movie_App.Models
         public DateTime EndDate { get; set; }
 
         public MovieCategory MovieCategory { get; set; }
+
+        //Relationships
+
+        public List<Actor_Movie> Actors_Movies { get; set; }
+
+        //Cinema
+
+        public Cinema Cinema { get; set; }
     }
 }

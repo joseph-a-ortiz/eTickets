@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Movie_App.Models
@@ -14,5 +15,8 @@ namespace Movie_App.Models
         public string FullName { get; set; }
 
         public string Bio { get; set; }
+
+        //Relationships
+        public List<Movie> Movies { get; set; }
     }
 }
