@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Movie_App.Data;
 
 namespace Movie_App.Models
@@ -29,6 +30,16 @@ namespace Movie_App.Models
 
         //Cinema
 
+        public int CinemaId { get; set; }
+        [ForeignKey("CinemaId")]
+
         public Cinema Cinema { get; set; }
+
+        //Producer
+
+        public int ProducerId { get; set; }
+        [ForeignKey("ProducerId")]
+
+        public Producer Producer { get; set; }
     }
 }
